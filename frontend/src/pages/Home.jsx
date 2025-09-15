@@ -1,17 +1,19 @@
 import { Button } from '@/components/ui/button'
-import { useUserContext } from '@/contexts/UserContext';
 import React from 'react'
+import { FeaturesSection, Footer, Header, HeroSection, StatsSection } from '../components';
 
 const Home = () => {
 
-  const userContext = useUserContext();
-  const logout = userContext?.logout;
 
   return (
-    <div>
-      <h1>Home</h1>
-      <p>Welcome to the Home page.</p>
-      <Button onClick={logout}>Logout</Button>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <StatsSection />
+      </main>
+      <Footer />
     </div>
   )
 }
